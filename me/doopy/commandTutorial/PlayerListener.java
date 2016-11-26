@@ -14,7 +14,6 @@ import me.doopy.commandTutorial.CommandTutorial;
 public class PlayerListener implements Listener {
 	
 	private CommandTutorial plugin;
-	
     private String[] msg;
     private String[] cmd;
     private String msg_start, msg_continue_tut;
@@ -41,7 +40,6 @@ public class PlayerListener implements Listener {
 		if (!user.exists()) {
 			//System.out.println("[TuT]" + player.getName() + ".yml existiert nicht. Erstelle sie...");
 			UserManager.setStepForUser(player, 0);
-			
 			player.sendMessage(ChatColor.BLUE + "[TuT] " + ChatColor.AQUA + msg_start);
 		} else if(UserManager.readStepOfUser(player) < 100 && UserManager.readStepOfUser(player) >= 0){
 			player.sendMessage(ChatColor.BLUE + "[TuT] " + ChatColor.AQUA + msg_continue_tut);
