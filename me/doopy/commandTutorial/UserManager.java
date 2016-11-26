@@ -15,15 +15,15 @@ public class UserManager {
         FileConfiguration usercfg = YamlConfiguration.loadConfiguration(userFile);
     	try {
     		if (!userFile.exists() ) {
-    		    userFile.createNewFile();
+    		   	userFile.createNewFile();
     			usercfg = YamlConfiguration.loadConfiguration(userFile);
     		}
-			usercfg.set("step", newstep);
-            usercfg.save(userFile);
-		} catch (IOException e) {
-			System.out.println("[TuT] The user yml file couldnt be edited!");
-			e.printStackTrace();
-		}
+		usercfg.set("step", newstep);
+            	usercfg.save(userFile);
+	} catch (IOException e) {
+		System.out.println("[TuT] The user yml file couldnt be edited!");
+		e.printStackTrace();
+	}
     }
     
     public static int readStepOfUser(Player player) {
@@ -32,7 +32,6 @@ public class UserManager {
         	return -1;
         }
     	FileConfiguration usercfg = YamlConfiguration.loadConfiguration(userFile);
-    	
     	int value = usercfg.getInt("step", 99);
     	return value;
     }
