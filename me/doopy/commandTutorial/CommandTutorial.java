@@ -20,9 +20,9 @@ public class CommandTutorial extends JavaPlugin {
 	private String msg_completed;
 	private String msg_skip, msg_skipped, loot, msg_alreadydone;
 	private int loots_count;
-    private String[] msg;
-    private String[] cmd;
-    private String[][] loots;
+    	private String[] msg;
+    	private String[] cmd;
+    	private String[][] loots;
 	
 	@Override
 	public void onDisable() {
@@ -57,7 +57,7 @@ public class CommandTutorial extends JavaPlugin {
 		//Readout of tutorial data
         for (int i = 0; i<=99; i++) {
         	msg[i] = this.getConfig().getString("tutorials." + i + ".message", null);
-            cmd[i] = this.getConfig().getString("tutorials." + i + ".command", null);
+            	cmd[i] = this.getConfig().getString("tutorials." + i + ".command", null);
         }
         
         	
