@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 public class UserManager {
 	private static String userDir = "plugins//CommandTutorial//user";
 	
-    public static void setStepForUser(Player player, int newstep) {
+   	public static void setStepForUser(Player player, int newstep) {
         File userFile = new File(userDir + File.separator + player.getName() + ".yml" );
         FileConfiguration usercfg = YamlConfiguration.loadConfiguration(userFile);
     	try {
     		if (!userFile.exists() ) {
-    			userFile.createNewFile();
+    		    userFile.createNewFile();
     			usercfg = YamlConfiguration.loadConfiguration(userFile);
     		}
 			usercfg.set("step", newstep);
