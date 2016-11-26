@@ -1,0 +1,24 @@
+tutorials:
+    '0':
+        message: First, you maybe want to know who is online, so you should list all online players with /who.
+        command: /who
+    '1':
+        message: If you want to come back to the spawn later, you can type /spawn. Try it out!
+        command: /spawn
+    '2':
+        message: Our server uses an economy system. Type /money to see your account balance.
+        command: /money
+        
+messages:
+    skipped: Tutorial skipped.
+    start: Welcome to the command tutorial! To continue, type /tut next, to skip /tut skip. After every command type /tut next again.
+    tutorial-completed: You have completed the tutorial!
+    check-skip: Do you really want to skip the tutorial?
+    alreadydone: You have completed the tutorial already!
+    continue-tut: Welcome back! Type /tut next to continue the tutorial.
+general:
+    #item ids + amount the player will receiver after completing the tutorial/skipping it
+    loot: 'IRON_PICKAXE 1,IRON_SWORD 1,IRON_CHESTPLATE 1,MELON 32'
+    
+    #If players should be allowed to skip the tutorial with /tut skip
+    skippable: true

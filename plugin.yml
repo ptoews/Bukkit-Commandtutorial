@@ -1,0 +1,30 @@
+name: CommandTutorial
+main: me.doopy.commandTutorial.CommandTutorial
+version: 1.0.1
+author: D00py
+website: http://dev.bukkit.org/bukkit-plugins/commandtutorial/
+commands:
+  tut:
+    description: Zeigt Beschreibung
+    usage: /tut
+  tut next:
+    description: Setzt das Tutorial fort
+    usage: /tut next
+  tut skip:
+    description: Ueberspringt das Tutorial
+    usage: /tut skip
+permissions:
+    tut.*:
+        description: Grants admin permissions for this plugin.
+        default: op
+        children:
+            tut.use: true
+            tut.ignore: true
+            tut.reload: true
+    tut.use:
+        description: Users with this permission will be shown the tutorial text and it allows /tut next and /tut skip (if skippable = true).
+        default: true
+    tut.ignore:
+        description: Users with this permission won't be shown the tutorial. (overwrites tut.use)
+    tut.reload:
+        description: Allows to reload the plugin.
