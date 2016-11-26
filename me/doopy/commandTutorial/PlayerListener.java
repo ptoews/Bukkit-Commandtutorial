@@ -14,9 +14,9 @@ import me.doopy.commandTutorial.CommandTutorial;
 public class PlayerListener implements Listener {
 	
 	private CommandTutorial plugin;
-    private String[] msg;
-    private String[] cmd;
-    private String msg_start, msg_continue_tut;
+    	private String[] msg;
+    	private String[] cmd;
+    	private String msg_start, msg_continue_tut;
 
 	
 	public PlayerListener(CommandTutorial tutorial) {
@@ -58,12 +58,9 @@ public class PlayerListener implements Listener {
 		}
 		if(step >= 99) return;
 		plugin.getLogger().info("preprocess before if, step = " + step + " & cmd[step] = " + cmd[step] + " & command = " + command);
-    	if (cmd[step] != null && command.startsWith(cmd[step])) {
-    		plugin.getLogger().info("preprocess in if");
-    		UserManager.setStepForUser(player, step + 1);
-    	}
-		
+    		if (cmd[step] != null && command.startsWith(cmd[step])) {
+    			plugin.getLogger().info("preprocess in if");
+    			UserManager.setStepForUser(player, step + 1);
+    		}
 	}
-
-	
 }
